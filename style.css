@@ -142,13 +142,26 @@ body {
   padding: 0;
 }
 
+main {
+  flex-grow: 1;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
-  height: 124px;
-  border: 1PX solid red;
+  min-height: 124px;
+  display: flex;
+  align-items: center;
+  /* border: 1PX solid red; */
 }
 
 .header-box {
-  border: 1PX solid black;
+  /* border: 1PX solid black; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -157,78 +170,59 @@ body {
 
 .header-controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-
+  gap: 10px;
 }
 
-.button-login {
-  border-radius: 2px;
+.btn {
+  display: flex;
   padding: 8px 16px;
-  width: 98px;
-  height: 40px;
-  background: var(--daybreak-blue---blue-6);
-  display: inline-flex;
   align-items: center;
-}
-
-.button-cart {
-  border: 1px solid var(--gray---gray-5);
+  gap: 4px;
   border-radius: 2px;
-  padding: 8px 16px;
-  width: 116px;
-  height: 40px;
-  background: var(--gray---gray-1);
-  display: inline-flex;
-  align-items: center;
+  outline: none;
 }
 
-.login-text {
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: var(--gray---gray-1);
-
-}
-
-.btn-pic {
-  margin-right: 8px;
+.btn-primory {
+  background: #1890ff;
+  border: 1px solid #1890ff;
+  color: #fff;
 }
 
 .login-image {
-  fill: var(--gray---gray-1);
+  fill: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.00);
+  color: #595959;
 }
 
 .cart-image {
-  fill: var(--gray---gray-7);
+  fill: #8c8c8c;
 }
-
-.cart-text {
-  font-size: 16px;
-  line-height: 24px;
-  /* line-height: 150%; */
-  text-align: center;
-  color: var(--gray---gray-8);
-}
-
-/* .main {} */
 
 .container {
   max-width: 1230px;
-  /* border: 1PX solid blue; */
   margin: 0px auto;
   padding-left: 15px;
   padding-right: 15px;
   height: 100%;
+  width: 100%;
 }
 
 .footer {
-  height: 156px;
-  border: 1PX solid red;
+  min-height: 156px;
+  display: flex;
+  align-items: center;
+  /* border: 1PX solid red; */
 }
 
 .footer-box {
-  border: 1PX solid black;
+  /* border: 1PX solid black; */
   height: 100%;
   display: flex;
   align-items: center;
