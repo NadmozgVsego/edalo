@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  font-family: Roboto;
+  line-height: normal;
+  font-style: normal;
+
 }
 
 :root {
@@ -218,6 +222,7 @@ main {
   min-height: 156px;
   display: flex;
   align-items: center;
+  padding: 60px 0;
   /* border: 1PX solid red; */
 }
 
@@ -227,21 +232,41 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 36px;
+  flex-wrap: wrap;
 }
 
 .footer-nav {
   flex-grow: 1;
 }
 
+.footer-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-nav ul li {
+  font-weight: 400;
+  font-size: 18px;
+  color: #595959;
+
+}
+
 .footer-social {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
-.soc-pic {
+/* .soc-pic {
   margin-left: 20px;
-}
+} */
 
 .logo {
   max-width: 100px;
@@ -266,21 +291,99 @@ main {
 
 .menu {
   /* отключили точки */
-  list-style: none;
+  /* list-style: none;
   margin: 0;
   padding-left: 22px;
   padding-right: 22px;
-  display: flex;
+  display: flex; */
 }
 
 /* отступ справа для всех пунктов меню, кроме последнего */
-.menu-item:not(:last-child) {
+/* .menu-item:not(:last-child) {
   margin-right: 14px;
-}
+} */
 
 .menu-link {
   /* Отключили подчеркивание ссылок */
   text-decoration: none;
   /* взяли цвет родителя (body) */
   color: inherit;
+}
+
+.banner {
+  margin-bottom: 56px;
+}
+
+.banner-item {
+  background-image: url(./banners/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  padding: 68px;
+  border-radius: 10px;
+}
+
+.banner-item--title {
+  font-weight: 700;
+  font-size: 39px;
+  color: #302c34;
+  max-width: 50%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.banner-item--subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  color: #302c34;
+  max-width: 50%;
+  margin: 0;
+}
+
+.products {}
+
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products-header-title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #000;
+
+}
+
+.products-header--search {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  min-width: 306px;
+  min-height: 34px;
+  padding: 5px 12px;
+}
+
+.products-header--search:focus {
+  outline: none;
+}
+
+.products-header--search::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #bfbfbf;
+
+}
+
+@media (max-width: 991px) {
+  .banner-item--title {
+    max-width: 100%;
+  }
+
+  .banner-item--subtitle {
+    max-width: 100%;
+  }
 }
