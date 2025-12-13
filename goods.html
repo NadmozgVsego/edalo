@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Delivery Foot</title>
-  <!-- <script src="/script.js" defer></script> -->
+  <script src="./script/index.js" defer></script>
 </head>
 
 <body>
@@ -23,14 +23,12 @@
           </a>
           <!-- /.header-logo -->
           <div class="header-controls">
-            <button class="btn btn-primory"><!-- button-login  -->
+            <button class="btn btn-primory">
               <img src="images/login.svg" alt="login" class="login-image">
-              <!-- <p class="login-text">Войти</p> -->
               Войти
             </button>
-            <button class="btn btn-outline"><!-- button-cart  -->
+            <button class="btn btn-outline" id="cart-button">
               <img src="images/cart.svg" alt="catr" class="cart-image">
-              <!-- <p class="cart-text">Корзина</p> -->
               Корзина
             </button>
 
@@ -45,7 +43,7 @@
     <main class="main">
       <section class="products">
         <div class="container">
-          <div class="products-wrapper">
+          <div class="products-wrapper" id="goods-container">
             <div class="products-card">
               <div class="products-card__image">
                 <img src="goods/image-6.jpg" alt="eda">
@@ -305,7 +303,7 @@
             <button class="btn btn-primory">
               Оформить заказ
             </button>
-            <button class="btn btn-outline">
+            <button class="btn btn-outline" id="cancel-cart-button">
               Отмена
             </button>
 
